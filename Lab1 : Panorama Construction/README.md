@@ -1,4 +1,4 @@
-# README
+# Lab 1 : Panorama Construction
 
 ## Overview
 This project demonstrates how to build a **panorama from two images** using the **Imagine++** library. The program allows the user to manually select point correspondences between two views, computes the homography relating them, and merges the images into a unified coordinate frame.
