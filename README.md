@@ -21,8 +21,18 @@ This repository explores state-of-the-art techniques used in advanced Computer V
 
 ---
 
-### 🔄 Lab 2: Epipolar Geometry - Essenctial and Fundamental Matrices - RANSAC algorithm
-*Will be updated as work progresses*
+### ✅ Lab 2: Epipolar Geometry - Essenctial and Fundamental Matrices - RANSAC algorithm
+
+**Architectures & Techniques:**
+- **SIFT feature detection and matching**
+- **Normalized 8-points estimation algorithm (with Hartley Normalization)**
+- **RANSAC Algorithm**
+- **Epipolar lines**
+
+
+**Technical Stack:**
+- C++
+- Imagine++
 
 ---
 
