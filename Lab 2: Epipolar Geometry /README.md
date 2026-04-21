@@ -74,9 +74,7 @@ The function `estimateF` implements the **normalized 8-point algorithm**:
    with $f$ being the 9-vector of the entries of $F$. Each row is of the form:
 
    ```cpp
-   [x1*x2, x1*y2, x1,
-    y1*x2, y1*y2, y1,
-    x2,    y2,    1]
+   [x1*x2, x1*y2, x1, y1*x2, y1*y2, y1, x2, y2, 1]
    ```
 
 3. **SVD to find the least-squares solution**  
@@ -86,13 +84,16 @@ The function `estimateF` implements the **normalized 8-point algorithm**:
    - Performs SVD on $F$: $F = U \Sigma V^T$.
    - Sets the smallest singular value in $\Sigma$ to zero.
    - Reconstructs the rank-2 fundamental matrix:
-
-    $$ F' = U \Sigma' V^T$$
+    ```math
+      F' = U \Sigma' V^T
+    ```
 
 5. **Denormalization**  
    Since the estimation was done on normalized points, the fundamental matrix is denormalized:
-
-   $$ F = T^T \cdot F' \cdot T' $$
+    
+    ```math
+      F = T^T \cdot F' \cdot T'
+    ```
 
 The resulting matrix $F$ satisfies the epipolar constraint $x'^T F x = 0$ for corresponding points.
 
@@ -107,11 +108,15 @@ The function `computeF` wraps the 8-point algorithm in a **RANSAC** loop to hand
   1. Randomly selects 8 matches to form a minimal sample.
   2. Calls `estimateF` to compute a candidate fundamental matrix $F$.
   3. For every match:
-     - Computes the epipolar line in the second image: $ l' = F^T x$.
+     - Computes the epipolar line in the second image:
+      ```math
+        l'=F^T x
+      ```
      - Computes the distance of the point $x'$ to the line $l'$:
 
-       $$ d = \frac{|x'^T l'|}{\|l'\|}$$
-
+      ```math
+        d = \frac{|x'^T l'|}{\|l'\|}
+      ```
      - Classifies the correspondence as **inlier** if `d <= distMax` with:
 
        ```cpp
@@ -122,9 +127,11 @@ The function `computeF` wraps the 8-point algorithm in a **RANSAC** loop to hand
 
 - The number of RANSAC iterations is **adaptively updated** based on the current inlier ratio $ \hat{w} $, using the theoretical formula:
 
-  $$ N_\text{necessary} = \frac{\log(\text{BETA})}{\log(1 - \hat{w}^8)} $$
+  ```math
+    N_\text{necessary} = \frac{\log(\beta)}{\log(1 - \hat{w}^8)} 
+  ```
 
-  where `BETA` is the failure probability (`0.01` in the code).
+  where $\beta$ is the failure probability (`0.01` in the code).
 
 - Once the best inlier set is found:
   - `matches` is **filtered in-place** to keep only the inliers.

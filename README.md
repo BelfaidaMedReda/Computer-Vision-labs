@@ -36,8 +36,18 @@ This repository explores state-of-the-art techniques used in advanced Computer V
 
 ---
 
-### 🔄 Lab 3: Disparity map
-*Will be updated as work progresses*
+### ✅ Lab 3: Disparity map using Seeds propagation
+
+**Architectures & Techniques:**
+- **Depth Estimation in Stereo View**
+- **3D Reconstruction**
+- **Disparity Map**
+- **Seeds Propagation**
+
+
+**Technical Stack:**
+- C++
+- Imagine++
 
 ---
 
