@@ -51,16 +51,21 @@ This repository explores state-of-the-art techniques used in advanced Computer V
 
 ---
 
-### 🔄 Lab 4: Graph Cuts and Application to Disparity Map Estimation
-*Will be updated as work progresses*
+### ✅ Lab 4: Graph Cuts and Application to Disparity Map Estimation
+
+**Architectures & Techniques:**
+- **Depth Estimation in Stereo View**
+- **3D Reconstruction**
+- **Disparity Map**
+- **Graph Cuts**
+- **Min-Cut & Maxflow algorithms for graphs**
+
+**Technical Stack:**
+- C++
+- OpenCV
+- Imagine++
 
 ---
-
-### 🔄 Lab 5: Multi-View Stereo
-*Will be updated as work progresses*
-
----
-
 
 ## 🛠️ Technologies & Tools
 
@@ -76,6 +81,13 @@ Each lab folder contains:
 
 ---
 
-**Course:** Computer Vision
-**Academic Year:** 2025-2026
-**Author:** Mohammed Reda Belfaida
+## Credit and Attribution 
+
+This project is based on material from the course [3D Vision](https://imagine.enpc.fr/~monasse/Stereo/) taught at __MVA master (M2 AI Master Program of Ecole Normale Supérieure Paris-Saclay)__, with contributions by:
+
+- **Pascal Monasse, Ecole des Ponts ParisTech [See personal webpage](https://imagine.enpc.fr/~monasse/)**
+- **Loïc Landrieu, Ecole des Ponts ParisTech [See personal webpage](https://loiclandrieu.com/)**
+- **Arslan Artykov, Ecole des Ponts ParisTech [See personal webpage](https://aartykov.github.io/)**
+
+The implementation in all labs leverages the [Imagine++](https://imagine.enpc.fr/~monasse/Imagine++/) library. 
+Please keep this attribution if you reuse, adapt, or share this project.

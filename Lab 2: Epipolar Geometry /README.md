@@ -219,45 +219,6 @@ This interactive tool provides a concrete visualization of the epipolar constrai
 
 ---
 
-## Building the Project
-
-### Using `make`
-
-Create a `Makefile` similar to other Imagine++ examples:
-
-```make
-all: fundamental
-
-fundamental: fundamental.cpp
-	$(CXX) fundamental.cpp -o fundamental -std=c++11 	    -I/path/to/Imagine++/include 	    -L/path/to/Imagine++/lib 	    -lImagineGraphics -lImagineImages -lImagineLinAlg
-```
-
-Adjust the paths to match your Imagine++ installation.
-
-Then compile:
-
-```bash
-make
-```
-
-### Manual Compilation Example
-
-```bash
-g++ fundamental.cpp -o fundamental -std=c++11     -I/path/to/Imagine++/include     -L/path/to/Imagine++/lib     -lImagineGraphics -lImagineImages -lImagineLinAlg
-```
-
----
-
-## Running the Program
-
-```bash
-./fundamental im1.jpg im2.jpg
-```
-
-If no image paths are provided, the program tries to load default images `im1.jpg` and `im2.jpg` from the Imagine++ resource path.
-
----
-
 ## Usage Steps
 
 1. **Start the program** with two views of the same static scene.
