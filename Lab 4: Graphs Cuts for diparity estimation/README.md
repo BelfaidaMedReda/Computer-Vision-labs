@@ -70,20 +70,27 @@ Lab 4: Graphs Cuts for diparity estimation/
 
 Here are the first two images to try with this method : 
 
-![Left Image](assets/face0.png "title-1") ![Right Image](assets/face1.png "title-2")
+<p float="left">
+  <img src="assets/face0.png" width="400" />
+  <img src="assets/face1.png" width="400" /> 
+</p>
+
 
 3D Reconstruction meshes look like while varying the __regularization term__ coefficient $\lambda$ : 
 
-<p align="center">
-<strong>λ = 0.1</strong><br>
-<img src="results/res0.gif" width=500px>
-<br><br>
-<strong>λ = 0.5</strong><br>
-<img src="results/res1.gif" width=500px">
-<br><br>
-<strong>λ = 0.0</strong><br>
-<img src="results/res3.gif" width=500px">
-</p>
+<table>
+  <tr>
+    <td><strong>λ = 0.1</strong></td>
+    <td><strong>λ = 0.5</strong></td>
+    <td><strong>λ = 0.0</strong></td>
+  </tr>
+  <tr>
+    <td><img src="results/res0.gif" width=400 height=400></td>
+    <td><img src="results/res1.gif" width=400 height=400></td>
+    <td><img src="results/res3.gif" width=400 height=400></td>
+  </tr>
+</table>
+
 
 **Key Takeaway** : 
 - Increasing $\lambda$ gives stronger smoothness.
